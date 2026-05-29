@@ -3,6 +3,11 @@ const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
 
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
+
 const connectDB = require("./config/db");
 
 const postRoutes = require("./routes/postRoutes");
