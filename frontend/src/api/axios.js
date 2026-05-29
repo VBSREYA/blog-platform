@@ -1,13 +1,12 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://blog-platform-qwcc.onrender.com",
+  baseURL: "https://blog-platform-qwcc.onrender.com/api",
 });
 
 API.interceptors.request.use(
   (config) => {
-    const token =
-      localStorage.getItem("token");
+    const token = localStorage.getItem("token");
 
     console.log("TOKEN:", token);
 
